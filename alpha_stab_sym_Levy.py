@@ -1,5 +1,5 @@
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 def stab_transf(G,W,alpha):
     val=(np.sin(alpha*G))/((np.cos(G))**(1/alpha))*((np.cos((1-alpha)*G))/(W))**((1-alpha)/(alpha))
