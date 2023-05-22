@@ -52,7 +52,7 @@ class AlphaStabSymLevy():
             inc.append((times[i+1]-times[i])**(1/alpha)*(np.sin(alpha*G[i]))/((np.cos(G[i]))**(1/alpha))*((np.cos((1-alpha)*G[i]))/(W[i]))**((1-alpha)/(alpha)))
         return np.cumsum(inc)
     
-    def __call__(self, alpha=self.alpha):
+    def __call__(self):
         low=-np.pi/2
         high=np.pi/2
         G=np.random.uniform(low,high,self.seq_len)
