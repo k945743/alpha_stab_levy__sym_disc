@@ -39,7 +39,7 @@ class AlphaStabSymLevy():
             self.times = [i*self.time_horizon/self.seq_len for i in range(self.seq_len)]
         elif switch == "times":
             self.times = XXX
-            self.seq_len = len(times)-1
+            self.seq_len = len(self.times)-1
         else:
             print("ERROR")
             
@@ -52,7 +52,7 @@ class AlphaStabSymLevy():
             inc.append((times[i+1]-times[i])**(1/alpha)*(np.sin(alpha*G[i]))/((np.cos(G[i]))**(1/alpha))*((np.cos((1-alpha)*G[i]))/(W[i]))**((1-alpha)/(alpha)))
         return np.cumsum(inc)
     
-    def __call__(self):
+    def __call__(self, alpha=self.alpha):
         low=-np.pi/2
         high=np.pi/2
         G=np.random.uniform(low,high,self.seq_len)
