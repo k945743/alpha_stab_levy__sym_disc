@@ -32,12 +32,12 @@ path=alpha_stab_levy(times,alpha,G,W)
 
 class AlphaStabSymLevy():
     
-    def __init__(self,XXX,alpha,switch="seq_len"):
-        if switch == "seq_len":
+    def __init__(self,XXX,alpha,mode="seq_len"):
+        if mode == "seq_len":
             self.seq_len = XXX[0]
             self.time_horizon = XXX[1]
             self.times = [i*self.time_horizon/self.seq_len for i in range(self.seq_len)]
-        elif switch == "times":
+        elif mode == "times":
             self.times = XXX
             self.seq_len = len(self.times)-1
         else:
