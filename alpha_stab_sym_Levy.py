@@ -32,7 +32,7 @@ class AlphaStabSymLevy():
 
 #EXAMPLES:
 
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 #EXAMPLE 1:
 #horizon = 1
