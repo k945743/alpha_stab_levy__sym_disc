@@ -35,9 +35,9 @@ class AlphaStabSymLevy():
 import matplotlib.pyplot as plt
 
 #EXAMPLE 1:
-horizon = 1
-seq_len = 1000
-times=[i*horizon/seq_len for i in range(seq_len)]
-levy = AlphaStabSymLevy(times,1.3)
-plt.plot(levy())
-plt.show()
+#horizon = 1
+# seq_len = 1000
+# times=[i*horizon/seq_len for i in range(seq_len)]
+# levy = AlphaStabSymLevy(times,1.3)
+# plt.plot(levy())
+# plt.show()
